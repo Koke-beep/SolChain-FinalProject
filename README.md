@@ -1,1 +1,1 @@
-# alvaro-final-project
+# SolChain cryptocurrency project
