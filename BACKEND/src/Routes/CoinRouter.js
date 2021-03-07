@@ -6,6 +6,7 @@ function CoinRouter () {
 
   router
     .route('/')
+    .get(CoinController.getAllCoins)
     .post(CoinController.addCoinDDBB)
 
   return router

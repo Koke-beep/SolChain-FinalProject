@@ -1,22 +1,31 @@
 const Coin = require('../Models/CointModel')
 
 function CoinController () {
-  const addCoinDDBB = async (req, res) => {
+  const addCoinDDBB = (req, res) => {
     const newCoin = new Coin({
-      ...req.body,
-      id: 20
+      ...req.body
     })
-    newCoin.save((error) => {
-      if (error) {
-        res.status(500)
-        res.send('Hubo un error al guardar')
-      } else {
-        res.json(newCoin)
-      }
-    })
+    newCoin.save()
+
+    res.json(newCoin)
   }
 
-  return addCoinDDBB
+  const getAllCoins = (req, res) => {
+    const allCoins = Coin.find({}, (coinError, coinMatrix) => {
+      if (coinError) {
+        res.status(500)
+        res.send('There was an error finding crypto')
+      } else {
+        res.json(coinMatrix)
+      }
+    })
+    res.json(allCoins)
+  }
+
+  return {
+    addCoinDDBB,
+    getAllCoins
+  }
 }
 
 module.exports = CoinController()
