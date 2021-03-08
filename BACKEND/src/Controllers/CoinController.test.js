@@ -25,20 +25,28 @@ describe('Given CoinController', () => {
       status: jest.fn()
     }
   })
-  describe('When getAllCoins is called', () => {
+  describe('When addCoinDDBB is called', () => {
     test('Then res.json will be called', () => {
-      getAllCoins(req, res)
+      addCoinDDBB(req, res)
 
       expect(res.json).toHaveBeenCalled()
     })
   })
 
-  describe('When addCoinDDBB is called', () => {
+  describe('When getAllCoins is called', () => {
     test('Then res.json will be called', () => {
       Coin.find.mockImplementationOnce((query, cb) => cb(false))
-      addCoinDDBB(req, res)
+      getAllCoins(req, res)
 
       expect(res.json).toHaveBeenCalled()
+    })
+  })
+  describe('When getAllCoins is called', () => {
+    test('Then res.send will be called', () => {
+      Coin.find.mockImplementationOnce((query, cb) => cb(true))
+      getAllCoins(req, res)
+
+      expect(res.send).toHaveBeenCalled()
     })
   })
 })

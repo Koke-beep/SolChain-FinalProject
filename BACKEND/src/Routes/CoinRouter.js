@@ -8,7 +8,10 @@ function CoinRouter () {
     .route('/')
     .get(CoinController.getAllCoins)
     .post(CoinController.addCoinDDBB)
-
+  
+    router.route('/:coinId')
+    .get(CoinController.getOneById)
+  
   return router
 }
 
