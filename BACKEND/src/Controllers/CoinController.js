@@ -6,8 +6,8 @@ function CoinController () {
     const newCoin = new Coin({
       ...req.body
     })
-    newCoin.save()
 
+    newCoin.save()
     res.json(newCoin)
   }
 
@@ -29,9 +29,10 @@ function CoinController () {
     const { data } = await axios.get(
        `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${id}&CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`
     )
-
-    data.save()
-    res.json(data)
+    console.log(data.data[1])
+    const dataCoin = new Coin(data.data[1])
+    dataCoin.save()
+    res.json(dataCoin)
   }
 
   return {

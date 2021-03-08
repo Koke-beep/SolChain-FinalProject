@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">72.73% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/20</span>
+                <span class='fraction'>16/22</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90% </span>
+                <span class="strong">72.73% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/20</span>
+                <span class='fraction'>16/22</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -110,8 +110,8 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -128,18 +128,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,15 +148,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Coin = require('../Models/CointModel')
-const axios = require('axios');
+const axios = require('axios')
 &nbsp;
 function CoinController () {
   const addCoinDDBB = (req, res) =&gt; {
     const newCoin = new Coin({
       ...req.body
     })
-    newCoin.save()
 &nbsp;
+    newCoin.save()
     res.json(newCoin)
   }
 &nbsp;
@@ -172,15 +172,16 @@ function CoinController () {
     res.json(allCoins)
   }
 &nbsp;
-  const getOneById = async (req,res)=&gt;{  
-  const id = req.params.coinId
+  const getOneById = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const id = <span class="cstat-no" title="statement not covered" >req.params.coinId</span>
 &nbsp;
-    const {data} = await axios.get(
-       `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${id}&amp;CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`       
-       );
-&nbsp;
-<span class="cstat-no" title="statement not covered" >       data.save()</span>
-<span class="cstat-no" title="statement not covered" >       res.json(data)  </span>
+    const { data } = <span class="cstat-no" title="statement not covered" >await axios.get(</span>
+       `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${id}&amp;CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`
+    )
+<span class="cstat-no" title="statement not covered" >    console.log(data)</span>
+    const dataCoin = <span class="cstat-no" title="statement not covered" >new Coin(data)</span>
+<span class="cstat-no" title="statement not covered" >    dataCoin.save()</span>
+<span class="cstat-no" title="statement not covered" >    res.json(dataCoin)</span>
   }
 &nbsp;
   return {
@@ -190,7 +191,6 @@ function CoinController () {
   }
 }
 &nbsp;
-&nbsp;
 module.exports = CoinController()
 &nbsp;</pre></td></tr></table></pre>
 
@@ -199,7 +199,7 @@ module.exports = CoinController()
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Mar 08 2021 10:23:31 GMT+0100 (hora estándar de Europa central)
+                at Mon Mar 08 2021 16:33:02 GMT+0100 (hora estándar de Europa central)
             </div>
         </div>
         <script src="../prettify.js"></script>
