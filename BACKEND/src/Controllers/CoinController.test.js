@@ -1,7 +1,8 @@
 const Coin = require('../Models/CointModel')
 const {
   addCoinDDBB,
-  getAllCoins
+  getAllCoins,
+  getOneById
 } = require('./CoinController')
 
 jest.mock('../Models/CointModel.js')
@@ -16,7 +17,8 @@ describe('Given CoinController', () => {
         currency: '$',
         amount: 1000,
         name: 'hi'
-      }
+      },
+      params:{ coinId:{}}
     }
 
     res = {
@@ -25,18 +27,34 @@ describe('Given CoinController', () => {
       status: jest.fn()
     }
   })
+  describe('When addCoinDDBB is called', () => {
+    test('Then res.json will be called', () => {
+      addCoinDDBB(req, res)
+
+      expect(res.json).toHaveBeenCalled()
+    })
+  })
+
   describe('When getAllCoins is called', () => {
     test('Then res.json will be called', () => {
+      Coin.find.mockImplementationOnce((query, cb) => cb(false))
       getAllCoins(req, res)
 
       expect(res.json).toHaveBeenCalled()
     })
   })
 
-  describe('When addCoinDDBB is called', () => {
-    test('Then res.json will be called', () => {
-      Coin.find.mockImplementationOnce((query, cb) => cb(false))
-      addCoinDDBB(req, res)
+  describe('When getAllCoins is called', () => {
+    test('Then res.send will be called', () => {
+      Coin.find.mockImplementationOnce((query, cb) => cb(true))
+      getAllCoins(req, res)
+
+      expect(res.send).toHaveBeenCalled()
+    })
+  })
+  describe('When getOneById is called', () => {
+    test('Then res.json will be called', async () => {
+      await getOneById(req, res)
 
       expect(res.json).toHaveBeenCalled()
     })

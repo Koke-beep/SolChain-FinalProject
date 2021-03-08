@@ -10,7 +10,7 @@ const URLDDBB = process.env.URLDDBB
 const CoinRouter = require('./src/Routes/CoinRouter')
 
 const app = express()
-connect(URLDDBB,
+connect("mongodb+srv://SolChain:OjmFCN2KS15aZicq@solcluster.yzezy.mongodb.net/currencyDDBB",
   { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use(morgan('dev'))
@@ -20,6 +20,6 @@ app.use(express.json())
 
 app.use('/', CoinRouter)
 
-app.listen(PORT, () => {
-  debug(`Server is runing in http://localhost:${PORT}`)
+app.listen(5000, () => {
+  debug(`Server is runing in http://localhost:5000`)
 })
