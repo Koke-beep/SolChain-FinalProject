@@ -1,0 +1,28 @@
+#social__box{
+  display:flex;
+  justify-content:flex-end;
+  padding-top:45vh;
+  width:100vw;
+  position:fixed;
+
+  .social__menu{
+    margin:0 20px 15px 0;
+
+
+    .social__menu-circle{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:2px solid #950AFF;
+      border-radius: 50%;
+      padding:5px;
+      mix-blend-mode: difference;
+    }
+
+    svg{
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
