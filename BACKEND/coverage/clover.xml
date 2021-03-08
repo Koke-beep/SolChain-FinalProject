@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1615192585828" clover="3.2.0">
-  <project timestamp="1615192585828" name="All files">
-    <metrics statements="21" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4" elements="28" coveredelements="24" complexity="0" loc="21" ncloc="21" packages="2" files="2" classes="2"/>
+<coverage generated="1615195411270" clover="3.2.0">
+  <project timestamp="1615195411270" name="All files">
+    <metrics statements="23" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5" elements="30" coveredelements="28" complexity="0" loc="23" ncloc="23" packages="2" files="2" classes="2"/>
     <package name="Controllers">
-      <metrics statements="18" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+      <metrics statements="20" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
       <file name="CoinController.js" path="C:\Users\Koke\Documents\SkyFinalProject\alvaro-final-project\BACKEND\src\Controllers\CoinController.js">
-        <metrics statements="18" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="4"/>
+        <metrics statements="20" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
@@ -19,9 +19,11 @@
         <line num="18" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
         <line num="23" count="2" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
         <line num="37" count="1" type="stmt"/>
         <line num="45" count="1" type="stmt"/>
       </file>

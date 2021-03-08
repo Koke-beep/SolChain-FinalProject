@@ -31,8 +31,7 @@ function CoinController () {
        );
 
        data.save()
-       res.json(data)
-  
+       res.json(data)  
   }
 
   return {
