@@ -2,7 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
+    jest: true
   },
   extends: [
     'standard'
@@ -16,7 +16,7 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-    'linebreak-style': 0,
+    'linebreak-style': ['error', 'windows'],
     'global-require': 0,
     'eslint linebreak-style': [0, 'error', 'windows'],
     'no-underscore-dangle': 0

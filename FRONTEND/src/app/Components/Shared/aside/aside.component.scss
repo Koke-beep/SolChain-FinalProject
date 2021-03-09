@@ -5,23 +5,36 @@
   width:100vw;
   position:fixed;
 
+  .empty-space{
+    width:13px;
+  }
+
   .social__menu{
-    margin:0 20px 15px 0;
+    display:flex;
+    align-items: center;
+    margin-bottom: 7px;
+    height: 47px;
+    border-top-left-radius: 48%;
+    border-bottom-left-radius: 48%;
+    padding-right:25px;
+    background-color: #000000c0;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h16v2h-6v6h6v8H8v-6H2v6H0V0zm4 4h2v2H4V4zm8 8h2v2h-2v-2zm-8 0h2v2H4v-2zm8-8h2v2h-2V4z' fill='%23161617' fill-opacity='0.51' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: 6px;
 
 
     .social__menu-circle{
       display:flex;
       align-items:center;
       justify-content:center;
-      border:2px solid #950AFF;
+      border:1px solid #950AFF;
       border-radius: 50%;
       padding:5px;
       mix-blend-mode: difference;
     }
 
     svg{
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
