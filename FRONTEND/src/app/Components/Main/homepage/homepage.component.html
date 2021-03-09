@@ -1,0 +1,26 @@
+<div id="homepage__box">
+  <div class="homepage__titles">
+    <svg x="0px" y="0px" viewBox="0 0 540 340">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#950aff" />
+          <stop offset="100%" stop-color="#5eaefd" />
+        </linearGradient>
+      </defs>
+      <g stroke="url(#gradient)" fill="none" strokeWidth="2">
+        <animate attributeName="stroke-width" values="0;1;2;3;2;1;0"from="2" to="3,1" dur="2s" repeatCount="indefinite"></animate>
+        <path d="M539,1 L1,1 L1,329 L463,329 L493,300 L539,300 Z" />
+      </g>
+    </svg>
+
+    <div class="homepage__titles-inside">
+      <h1>Evolution through innovation and visionary technology</h1>
+      <h4>SolChain is your reliable partner for distributed ledger technology(DLT)
+          validation services and blockchain consultancy
+      </h4>
+      <h4>Test your earnings amount on our dashboard and stake with us!</h4>
+    </div>
+</div>
+<ng-particles [id]="id" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)" (particlesInit)="particlesInit($event)"></ng-particles>
+
+</div>
