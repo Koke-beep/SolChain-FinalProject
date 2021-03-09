@@ -2,16 +2,16 @@
   display:flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2B2C2F;
+  background-color: #101624;
   padding: 5px 20px;
   position:fixed;
-  box-shadow: 0 5px 15px #24073af3;
+  box-shadow: 0 5px 15px #101624;
   letter-spacing: 4px;
   z-index:20;
 
 
   .header__menu-icon{
-    padding-right:25px;
+    padding-right:12%;
   }
   svg{
     width:30px;
@@ -42,7 +42,7 @@
     }
 
     .stake__bg{
-      background: #2B2C2F;
+      background: #101624;
       border-radius: 30px;
     }
 
@@ -78,7 +78,7 @@
   }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 600px) {
   .header__nav {
     display: none !important;
    }
@@ -87,7 +87,7 @@
    }
 }
 
-@media only screen and (min-width: 421px) {
+@media only screen and (min-width: 601px) {
   .header__menu-icon {
     display: none !important;
    }
