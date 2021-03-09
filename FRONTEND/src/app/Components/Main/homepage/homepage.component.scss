@@ -1,0 +1,70 @@
+#homepage__box{
+  display:flex;
+  align-items:center;
+  height:100vh;
+  width:100vw;
+  background-image:url('../../../../assets//Img//blockchain.jpg');
+  background-size: cover;
+  text-align:justify;
+
+  .homepage__titles{
+    position: absolute;
+    width: 45%;
+    margin-left:10%;
+
+    svg{
+      position:absolute;
+      height: 500px;
+      stroke-dasharray: 600;
+      stroke-width: 3px;
+      transition: all .8s ease-in-out;
+    }
+
+    .homepage__titles-inside{
+      margin:5% 13% 5% 6%;
+      padding:15px;
+      background-color: rgba(7, 7, 7, 0.404);
+      letter-spacing: 5px;
+      border-radius: 30px;
+      width:100%;
+
+      h1{
+        font-size:30px;
+        line-height: 180%;
+        margin-bottom:6%;
+      }
+
+      h4{
+        font-size:12px;
+        line-height: 30px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+   ng-particles{
+    width:100vw;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width:1300px){
+  .homepage__titles-inside{
+    width:100%;
+    min-width: 312px;
+
+    h1{
+      font-size:20px !important;
+    }
+    h4{
+      font-size:10px !important;
+    }
+  }
+
+  svg{
+    display:none;
+  }
+}
+
+
+
