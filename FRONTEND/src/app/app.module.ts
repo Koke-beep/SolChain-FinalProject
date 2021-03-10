@@ -6,13 +6,15 @@ import { HeaderComponent } from './Components/Shared/Header/header.component'
 import { AsideComponent } from './Components/Shared/aside/aside.component'
 import { HomepageComponent } from './Components/Main/homepage/homepage.component'
 import { NgParticlesModule } from 'ng-particles'
+import { DashboardComponent } from './Components/Main/dashboard/dashboard.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AsideComponent,
-    HomepageComponent
+    HomepageComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
