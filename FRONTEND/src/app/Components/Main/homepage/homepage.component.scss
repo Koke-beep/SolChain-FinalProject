@@ -9,7 +9,7 @@
   .homepage__titles{
     position: absolute;
     width: 750px;
-    margin-left:10%;
+    padding-left:10%;
 
     svg{
       position:absolute;
@@ -52,7 +52,6 @@
   .homepage__titles{
     display:flex;
     align-items:center;
-    width:600px ;
   }
 
   .homepage__titles-inside{
