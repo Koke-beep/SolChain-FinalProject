@@ -2,24 +2,26 @@
   <div>
     <h2>Networks</h2>
     <div class="company__section">
-      <div class="company__info">
+
+      <div class="company__info" *ngFor="let coin of coins">
         <div class="company__info-logo">
-          <img src="../../../../assets/Img/solana.svg"/>
+          <img src={{coin.logo}}/>
         </div>
         <div class="company__info-data">
-          <h4>Solana</h4>
+          <h4>{{coin.name}}</h4>
           <span>Network</span>
-          <span>17%</span>
-          <button type="button" class="company__logo">
+          <span>{{coin.average}}%</span>
+          <button  class="company__logo" type="button">
             <img src="https://img.icons8.com/nolan/96/cancel.png"/>
           </button>
         </div>
         <div>
-          <button type="button" class="company__logo">
+          <button  class="company__logo" type="button">
             <img src="https://img.icons8.com/nolan/96/cancel.png"/>
           </button>
         </div>
       </div>
+
     </div>
   </div>
   <img alt="networks" class="dashboard__background" src="../../../../assets//Img//Networks.jpg">

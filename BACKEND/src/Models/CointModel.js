@@ -2,9 +2,9 @@ const { Schema, model } = require('mongoose')
 
 const coinSchema = new Schema({
   name: String,
+  id: Number,
   symbol: String,
   logo: String,
-  technical_doc: Array,
   description: String
 })
 

@@ -2,14 +2,11 @@ const Coin = require('../Models/CointModel')
 const axios = require('axios')
 
 function CoinController () {
-  const addCoinDDBB = (req, res) => {
-    const newCoin = new Coin({
-      ...req.body
-    })
-
-    newCoin.save()
-    res.json(newCoin)
-  }
+  // const addCoinDDBB = async (req, res) => {
+  //   const { data } = await axios.get(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${24}&CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`)
+  //   const createdCoin = await Coin.create(data.data[24])
+  //   res.json(createdCoin)
+  // }
 
   const getAllCoins = async (req, res) => {
     const allCoins = await Coin.find({}, (coinError, coinMatrix) => {
@@ -29,14 +26,14 @@ function CoinController () {
     const { data } = await axios.get(
        `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${id}&CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`
     )
-    console.log(data.data[1])
+
     const dataCoin = new Coin(data.data[1])
     dataCoin.save()
     res.json(dataCoin)
   }
 
   return {
-    addCoinDDBB,
+    // addCoinDDBB,
     getAllCoins,
     getOneById
   }

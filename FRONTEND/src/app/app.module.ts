@@ -7,7 +7,7 @@ import { AsideComponent } from './Components/Shared/aside/aside.component'
 import { HomepageComponent } from './Components/Main/homepage/homepage.component'
 import { NgParticlesModule } from 'ng-particles'
 import { DashboardComponent } from './Components/Main/dashboard/dashboard.component'
-
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +17,7 @@ import { DashboardComponent } from './Components/Main/dashboard/dashboard.compon
     DashboardComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     NgParticlesModule
   ],
