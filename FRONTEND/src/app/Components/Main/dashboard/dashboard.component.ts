@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
 
     listCoins: Coin[] = []
     user = {
-      logged: false,
+      logged: true,
       list: [
         {
           _id: '6048eaf468784e42d04c0fa3',
