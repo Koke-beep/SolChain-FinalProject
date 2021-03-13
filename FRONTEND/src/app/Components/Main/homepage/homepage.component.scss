@@ -5,13 +5,14 @@
   width:100vw;
   background-image:url('../../../../assets//Img//blockchain.jpg');
   background-size: cover;
+  // scroll-snap-align: start;
 
   .homepage__titles{
     position: absolute;
     width: 750px;
     padding-left:10%;
 
-    svg{
+    .homepage__titles-gradient{
       position:absolute;
       height: 430px;
       stroke-dasharray: 600;
@@ -19,7 +20,7 @@
       transition: all .8s ease-in-out;
     }
 
-    .homepage__titles-inside{
+    .homepage__inside{
       margin:5% 13% 5% 6%;
       padding:15px;
       background-color: rgba(7, 7, 7, 0.404);
@@ -27,13 +28,13 @@
       border-radius: 30px;
       width:75%;
 
-      h1{
+      .homepage__inside-title{
         font-size:19px;
         line-height: 180%;
         margin-bottom:6%;
       }
 
-      h4{
+      .homepage__inside-primary{
         font-size:13px;
         line-height: 28px;
         margin-bottom: 20px;
@@ -54,7 +55,7 @@
     align-items:center;
   }
 
-  .homepage__titles-inside{
+  .homepage__inside{
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -65,15 +66,12 @@
     border-top-right-radius: 35% !important;
     border-bottom-left-radius: 35% !important;
 
-    h1{
-      font-size:17px !important;
-    }
-    h4{
+    .homepage__inside-primary{
       font-size:11px !important;
     }
   }
 
-  svg{
+  .homepage__titles-gradient{
     display:none;
   }
 }

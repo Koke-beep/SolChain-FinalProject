@@ -10,7 +10,7 @@
   z-index:20;
 
 
-  .header__menu-icon{
+  #header__menu-icon{
     padding-right:12%;
   }
   svg{
@@ -23,21 +23,21 @@
     height:50px;
   }
 
-  nav{
+  .header__nav{
     display:flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 10%;
     width:100%;
 
-    a{
+    .header__nav-link{
       text-decoration:none;
       color:#00d9a1;
       margin-right: 80px;
       font-size:13px;
     }
 
-    a:hover{
+    .header__nav-link:hover{
       font-weight: bolder;
     }
 
@@ -46,7 +46,7 @@
       border-radius: 30px;
     }
 
-    button{
+    .header__nav-btn{
       all:unset;
       font-family: inherit;
       font-weight: 800;
@@ -84,8 +84,8 @@
 }
 
 @media only screen and (min-width: 601px) {
-  .header__menu-icon {
-    display: none !important;
+  #header__menu-icon {
+    display: none ;
    }
 
     #header__box{

@@ -1,28 +1,61 @@
 <section id="dashboard__box">
   <div>
-    <h2>Networks</h2>
-    <div class="company__section">
-
-      <div class="company__info" *ngFor="let coin of coins">
-        <div class="company__info-logo">
-          <img src={{coin.logo}}/>
+    <h2 class="dashboard__title">Networks</h2>
+    <div  *ngIf="user.logged; then userBlock else dashBlock "></div>
+      <ng-template #userBlock>
+        <div class="company__section">
+          <div class="company__info" *ngFor="let coin of user.list ">
+            <div class="company__info-logo">
+              <img src={{coin.logo}}/>
+            </div>
+            <div class="company__data">
+              <a class="company__data-link" routerLink="/user">
+                <h4>{{coin.name}}</h4>
+                <span>Network</span>
+                <span [style.color]="+coin.average > 16 ? 'green' : +coin.average > 6 ? 'orange' : 'red'" >
+                  {{coin.average}}%
+                </span>
+              </a>
+              <button  class="company__logo" type="button" >
+                <img src="https://img.icons8.com/nolan/96/cancel.png"/>
+              </button>
+            </div>
+            <div>
+              <button class="company__logo" type="button" >
+                <img src="https://img.icons8.com/nolan/96/cancel.png"/>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="company__info-data">
-          <h4>{{coin.name}}</h4>
-          <span>Network</span>
-          <span>{{coin.average}}%</span>
-          <button  class="company__logo" type="button">
-            <img src="https://img.icons8.com/nolan/96/cancel.png"/>
-          </button>
+      </ng-template>
+      <ng-template #dashBlock>
+        <div class="company__section">
+          <div class="company__info" *ngFor="let coin of listCoins">
+            <div class="company__info-logo">
+              <img src={{coin.logo}}/>
+            </div>
+            <div class="company__data">
+              <a class="company__data-link" routerLink="/user">
+                <h4>{{coin.name}}</h4>
+                <span>Network</span>
+                <span [style.color]="+coin.average > 16 ? 'green' : +coin.average > 6 ? 'orange' : 'red'" >
+                  {{coin.average}}%
+                </span>
+              </a>
+            </div>
+          </div>
+          <ul class="pagey-page">
+            <li><a  class="pagey__current" href="#company__section">&laquo;</a></li>
+            <li><a #prueba class="pagey__current" (click)="getTopCoins(0)" href="#company__section">1</a></li>
+            <li><a #prueba1 class="pagey__current" (click)="getTopCoins(6)" href="#company__section">2</a></li>
+            <li><a #prueba2 class="pagey__current" (click)="getTopCoins(12)" href="#company__section">3</a></li>
+            <li><a #prueba3 class="pagey__current" (click)="getTopCoins(17)" href="#company__section">4</a></li>
+            <li><a #prueba4 class="pagey__current" (click)="getTopCoins(23)" href="#company__section">5</a></li>
+            <li><a class="pagey__current" (click)="getTopCoins(listCoins[4])" href="#company__section">&raquo;</a></li>
+          </ul>
         </div>
-        <div>
-          <button  class="company__logo" type="button">
-            <img src="https://img.icons8.com/nolan/96/cancel.png"/>
-          </button>
-        </div>
-      </div>
+      </ng-template>
 
     </div>
-  </div>
   <img alt="networks" class="dashboard__background" src="../../../../assets//Img//Networks.jpg">
 </section>

@@ -8,18 +8,25 @@ import { HomepageComponent } from './Components/Main/homepage/homepage.component
 import { NgParticlesModule } from 'ng-particles'
 import { DashboardComponent } from './Components/Main/dashboard/dashboard.component'
 import { HttpClientModule } from '@angular/common/http'
+import { AppRoutingModule } from './app-routing.module'
+import { ListComponent } from './Components/list/list.component'
+import { HomeComponent } from './Components/Main/home.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AsideComponent,
     HomepageComponent,
-    DashboardComponent
+    DashboardComponent,
+    ListComponent,
+    HomeComponent
   ],
   imports: [
-    HttpClientModule,
     BrowserModule,
-    NgParticlesModule
+    NgParticlesModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
