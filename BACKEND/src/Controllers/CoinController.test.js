@@ -1,9 +1,9 @@
 const Coin = require('../Models/CointModel')
-const axios = require('axios')
+// const axios = require('axios')
+
 const {
   addCoinDDBB,
-  getAllCoins,
-  getOneById
+  getAllCoins
 } = require('./CoinController')
 
 jest.mock('../Models/CointModel.js')
@@ -28,13 +28,6 @@ describe('Given CoinController', () => {
       send: jest.fn(),
       status: jest.fn()
     }
-  })
-  describe('When addCoinDDBB is called', () => {
-    test('Then res.json will be called', () => {
-      addCoinDDBB(req, res)
-
-      expect(res.json).toHaveBeenCalled()
-    })
   })
 
   describe('When getAllCoins is called', () => {

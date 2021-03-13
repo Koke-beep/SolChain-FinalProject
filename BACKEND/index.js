@@ -1,6 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const debug = require('debug')('app')
+const cors = require('cors')
 require('dotenv').config()
 
 const { connect } = require('mongoose')
@@ -10,6 +11,8 @@ const URLDDBB = process.env.URLDDBB
 const CoinRouter = require('./src/Routes/CoinRouter')
 
 const app = express()
+app.use(cors())
+
 connect(URLDDBB,
   { useNewUrlParser: true, useUnifiedTopology: true })
 
