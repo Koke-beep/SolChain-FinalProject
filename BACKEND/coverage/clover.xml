@@ -1,37 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1615471892605" clover="3.2.0">
-  <project timestamp="1615471892605" name="All files">
-    <metrics statements="20" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3" elements="26" coveredelements="20" complexity="0" loc="20" ncloc="20" packages="2" files="2" classes="2"/>
+<coverage generated="1615649399202" clover="3.2.0">
+  <project timestamp="1615649399202" name="All files">
+    <metrics statements="18" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="3" elements="27" coveredelements="18" complexity="0" loc="18" ncloc="18" packages="2" files="2" classes="2"/>
     <package name="Controllers">
-      <metrics statements="17" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
-      <file name="CoinController.js" path="C:\Users\Koke\Documents\SkyFinalProject\alvaro-final-project\BACKEND\src\Controllers\CoinController.js">
-        <metrics statements="17" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="3"/>
+      <metrics statements="15" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="3"/>
+      <file name="UserController.js" path="C:\Users\Koke\Documents\SkyFinalProject\alvaro-final-project\BACKEND\src\Controllers\UserController.js">
+        <metrics statements="15" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="5" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
       </file>
     </package>
     <package name="Models">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="CointModel.js" path="C:\Users\Koke\Documents\SkyFinalProject\alvaro-final-project\BACKEND\src\Models\CointModel.js">
+      <file name="User.js" path="C:\Users\Koke\Documents\SkyFinalProject\alvaro-final-project\BACKEND\src\Models\User.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
       </file>
     </package>
   </project>

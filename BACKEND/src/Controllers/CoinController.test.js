@@ -2,7 +2,6 @@ const Coin = require('../Models/CointModel')
 // const axios = require('axios')
 
 const {
-  addCoinDDBB,
   getAllCoins
 } = require('./CoinController')
 

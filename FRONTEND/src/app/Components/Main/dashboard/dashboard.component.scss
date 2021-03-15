@@ -2,7 +2,6 @@
   display:flex;
   color:black;
   height:calc(100vh - 90px);
-  // scroll-snap-align: start;
 
   .dashboard__title{
     display:flex;
@@ -13,20 +12,68 @@
     margin:0 80px;
   }
 
-.company__section{
-  display:flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-  margin-top:60px;
-  width:60vw;
+  .search__filter{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    padding-top: 20px;
+    position:relative;
+
+    input{
+      width: 150px;
+      transition: width 0.5s;
+    }
+    input:focus{
+      width: 360px;
+    }
+
+    .filter__list{
+      display:flex;
+      flex-direction:column;
+      border:2px solid gray;
+      border-bottom-left-radius:15px;
+      border-bottom-right-radius:15px;
+      position:absolute;
+      background-color:white;
+      margin-top:20px;
+
+      div{
+        display:flex;
+        justify-content: space-between;
+        width:340px;
+        padding: 3px 10px;
+      }
+      div:hover{
+        background-color: #00d9a1;
+        border: 2px solid #950aff;
+        border-radius: 10px;
+      }
+      button{
+        width:25px;
+        height:100%;
+        font-size:15px;
+        cursor: pointer;
+      }
+    }
+
+    .filter__list-fade{
+      display:none;
+    }
+  }
+
+  .company__section{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-top:60px;
+    width:60vw;
 
     .company__info{
       display:flex;
       flex-direction:row;
       align-items: center;
       margin-bottom: 2em;
-
       .company__info-logo{
         display:flex;
         justify-content: center;
@@ -34,58 +81,49 @@
         width:65px;
         height:65px;
         border-radius:50%;
-        border:4px solid rgba(128, 128, 128, 0.562);
+        border:4px outset #00d9a1;
         position:absolute;
         z-index: 18;
         background-color:white;
-
         img{
           width:60%;
           height:60%;
         }
       }
-
       .company__data{
         display:flex;
         margin-left:50px;
         padding:0 20px 0 80px;
         height:40px;
-        border:5px double rgba(128, 128, 128, 0.562);
+        border:5px outset #00d9a1;
         border-radius:0 80px 80px 0;
         width: 25em;
-
         & .company__logo{
           display:none;
         }
-
         & span:nth-child(2){
          font-size:18px;
         }
         & span:nth-child(3){
           font-weight: bold;
-          // color:rgb(8, 202, 8);
         }
-
         .company__data-link{
           display:flex;
           justify-content: space-between;
           align-items: center;
           width:100%;
           cursor: pointer;
-
           h4{
             font-size: 1.3em;
             width:160px;
           }
         }
       }
-
       .company__logo{
         border:none;
         background-color:transparent;
         outline:none;
         cursor:pointer;
-
         img{
           height:40px;
           width:40px;
@@ -136,71 +174,3 @@
 }
 
 
-//pagination
-
-$diamond-width: 30px;
-$diamond-offset: 15px;
-$diamond-background: #950aff;
-
-ul {
-  list-style: none;
-  display: flex;
-  margin-top:20px;
-}
-
-li {
-  margin-left: -$diamond-offset;
-  position: relative;
-
-  &:nth-child(even) {
-    transform: translateY(-$diamond-offset);
-  }
-}
-
-.pagey__current {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FFF;
-  text-decoration: none;
-  position: relative;
-  height: $diamond-width * 2;
-  width: $diamond-width * 2;
-  color: lighten($diamond-background, 35%);
-  transition: 0.3s ease all;
-
-  &:hover   {
-    color: #FFF;
-
-    &:before {
-      border-bottom-color: lighten($diamond-background, 5%);
-    }
-    &:after  {
-      border-top-color: lighten($diamond-background, 5%);
-    }
-  }
-
-  &:before,
-  &:after   {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    z-index: -1;
-    left: 0;
-    transition: 0.3s ease all;
-  }
-
-  &:before {
-    border: $diamond-width solid transparent;
-    border-bottom-color: $diamond-background;
-    top: -$diamond-width;
-  }
-
-  &:after {
-    border: $diamond-width solid transparent;
-    border-top-color: $diamond-background;
-    bottom: -$diamond-width;
-  }
-}

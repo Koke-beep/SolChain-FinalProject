@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core'
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 
 import { AppComponent } from './app.component'
@@ -12,6 +12,10 @@ import { AppRoutingModule } from './app-routing.module'
 import { ListComponent } from './Components/list/list.component'
 import { HomeComponent } from './Components/Main/home.component'
 
+import { NgxPaginationModule } from 'ngx-pagination'
+import { FormsModule } from '@angular/forms';
+import { SolServicesComponent } from './Components/Main/solServices/sol-services/sol-services.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,15 +24,20 @@ import { HomeComponent } from './Components/Main/home.component'
     HomepageComponent,
     DashboardComponent,
     ListComponent,
-    HomeComponent
+    HomeComponent,
+    SolServicesComponent
   ],
+
   imports: [
     BrowserModule,
     NgParticlesModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

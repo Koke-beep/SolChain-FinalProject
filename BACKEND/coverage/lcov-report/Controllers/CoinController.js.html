@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.59% </span>
+                <span class="strong">58.82% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/17</span>
+                <span class='fraction'>10/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">70.59% </span>
+                <span class="strong">58.82% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/17</span>
+                <span class='fraction'>10/17</span>
             </div>
         
             
@@ -99,8 +99,22 @@
 <a name='L40'></a><a href='#L40'>40</a>
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
-<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -118,22 +132,36 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -142,7 +170,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const Coin = require('../Models/CointModel')
-const axios = require('axios')
+// const axios = require('axios')
 &nbsp;
 function CoinController () {
   // const addCoinDDBB = async (req, res) =&gt; {
@@ -151,8 +179,8 @@ function CoinController () {
   //   res.json(createdCoin)
   // }
 &nbsp;
-  const getAllCoins = async (req, res) =&gt; {
-    const allCoins = await Coin.find({}, (coinError, coinMatrix) =&gt; {
+  const getAllCoins = (req, res) =&gt; {
+    Coin.find({}, (coinError, coinMatrix) =&gt; {
       if (coinError) {
         res.status(500)
         res.send('There was an error finding crypto')
@@ -160,25 +188,39 @@ function CoinController () {
         res.json(coinMatrix)
       }
     })
-    res.json(allCoins)
   }
 &nbsp;
-  const getOneById = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
-    const id = <span class="cstat-no" title="statement not covered" >req.params.coinId</span>
+  const deleteOneUserCoin = <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
+    const { coinId } = <span class="cstat-no" title="statement not covered" >req.params</span>
 &nbsp;
-    const { data } = <span class="cstat-no" title="statement not covered" >await axios.get(</span>
-       `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${id}&amp;CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`
-    )
-&nbsp;
-    const dataCoin = <span class="cstat-no" title="statement not covered" >new Coin(data.data[1])</span>
-<span class="cstat-no" title="statement not covered" >    dataCoin.save()</span>
-<span class="cstat-no" title="statement not covered" >    res.json(dataCoin)</span>
+<span class="cstat-no" title="statement not covered" >    await Coin.findByIdAndDelete(coinId, <span class="fstat-no" title="function not covered" >(e</span>rror, coinDeleted) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (error) {</span>
+<span class="cstat-no" title="statement not covered" >        res.status(500)</span>
+<span class="cstat-no" title="statement not covered" >        res.send(`Hubo un error ${error} al borrar la moneda`)</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        res.status(200)</span>
+<span class="cstat-no" title="statement not covered" >        res.json(coinDeleted)</span>
+      }
+    })
   }
+&nbsp;
+  // const getOneById = async (req, res) =&gt; {
+  //   const id = req.params.coinId
+&nbsp;
+  //   const { data } = await axios.get(
+  //      `https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=${id}&amp;CMC_PRO_API_KEY=771b5c88-165c-4659-8ef0-bc093a206eed`
+  //   )
+&nbsp;
+  //   const dataCoin = new Coin(data.data[1])
+  //   dataCoin.save()
+  //   res.json(dataCoin)
+  // }
 &nbsp;
   return {
     // addCoinDDBB,
+    // getOneById,
     getAllCoins,
-    getOneById
+    deleteOneUserCoin
   }
 }
 &nbsp;
@@ -190,7 +232,7 @@ module.exports = CoinController()
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Mar 11 2021 15:11:32 GMT+0100 (hora estándar de Europa central)
+                at Sat Mar 13 2021 16:01:20 GMT+0100 (hora estándar de Europa central)
             </div>
         </div>
         <script src="../prettify.js"></script>
