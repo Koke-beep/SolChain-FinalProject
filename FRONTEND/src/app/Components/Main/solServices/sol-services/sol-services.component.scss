@@ -1,0 +1,41 @@
+
+#services__box{
+  display:flex;
+  align-items:center;
+  background-image: url('../../../../../assets//Img//services-bg.jpg');
+  background-size:cover;
+  height:100vh;
+  width:100vw;
+  margin-top:25px;
+  color:black;
+
+  svg{
+    width:50px;
+    height:50px;
+  }
+  .cube-decorator{
+    width:400px;
+    height:400px;
+    margin-left: 300px;
+  }
+  .services__category{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-left: 100px;
+
+    .services__category-info{
+      display:flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      font-size:13px;
+      width:62 0px;
+
+      p{
+        word-wrap: break-word;
+      }
+    }
+  }
+
+}

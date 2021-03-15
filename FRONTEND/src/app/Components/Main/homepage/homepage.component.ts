@@ -10,10 +10,8 @@ export class HomepageComponent implements OnInit {
   }
 
   id = 'tsparticles';
-    /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
     particlesUrl = 'http://foo.bar/particles.json';
 
-    /* or the classic JavaScript object */
     particlesOptions = {
 
       fpsLimit: 60,
