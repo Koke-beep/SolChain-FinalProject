@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   config:any
 
   user = {
-    logged: false,
+    logged: true,
     list: [
       {
         _id: '6048eaf468784e42d04c0fa3',
@@ -72,7 +72,6 @@ export class DashboardComponent implements OnInit {
   getTopCoins () {
     this.topCoinDashboard.getBestCoins().subscribe(data => {
       this.listCoins = data
-      console.log(this.listCoins)
     }, error => {
       console.log(error)
     })
@@ -80,7 +79,7 @@ export class DashboardComponent implements OnInit {
 
   filterCoinByName (name) {
     this.coinFound = !name ? [] : this.coinFound = this.listCoins.filter(coin => coin.name.toUpperCase().includes(name.toUpperCase()))
-    this.coinFound = this.coinFound.sort((a, b) => a.name.localeCompare(b.name))
+    this.coinFound = this.coinFound.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()))
   }
 
   addCoinToList (coin, owner) {

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { ListComponent } from './Components/list/list.component'
+import { DetailComponent } from './Components/Detail/detail.component'
 import { HomeComponent } from './Components/Main/home.component'
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'user', component: ListComponent }
+  { path: 'detail/:coinId', component: DetailComponent }
 ]
 
 @NgModule({

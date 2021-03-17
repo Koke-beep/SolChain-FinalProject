@@ -1,12 +1,17 @@
 #dashboard__box{
   display:flex;
   color:black;
-  height:calc(100vh - 90px);
+  height:calc(100vh);
+  padding-bottom:40px;
+
+  .dashboard_data{
+    padding-top: 80px;
+  }
 
   .dashboard__title{
     display:flex;
     justify-content:center;
-    padding: 40px 20px 25px;
+    padding: 20px 20px 25px;
     font-size:30px;
     border-bottom: 2px dotted  black;
     margin:0 80px;
@@ -66,7 +71,7 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    margin-top:60px;
+    margin-top:30px;
     width:60vw;
 
     .company__info{

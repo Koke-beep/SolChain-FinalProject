@@ -1,5 +1,5 @@
 <section id="dashboard__box">
-  <div>
+  <div class="dashboard_data">
     <h2 class="dashboard__title">Networks</h2>
 
     <div class="search__filter">
@@ -28,7 +28,7 @@
               <img src={{coin.logo}}/>
             </div>
             <div class="company__data">
-              <a class="company__data-link" routerLink="/user">
+              <a class="company__data-link" routerLink="/detail/{{coin.id}}">
                 <h4>{{coin.name}}</h4>
                 <span>Network</span>
                 <span [style.color]="+coin.average > 16 ? 'green' : +coin.average > 6 ? 'orange' : 'red'" >
@@ -62,7 +62,7 @@
               <img src={{coin.logo}}/>
             </div>
             <div class="company__data">
-              <a class="company__data-link" routerLink="/user">
+              <a class="company__data-link" routerLink="/detail/{{coin.id}}">
                 <h4>{{coin.name}}</h4>
                 <span>Network</span>
                 <span [style.color]="+coin.average > 16 ? 'green' : +coin.average > 6 ? 'orange' : 'red'" >
