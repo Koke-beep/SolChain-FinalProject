@@ -9,12 +9,13 @@ import { NgParticlesModule } from 'ng-particles'
 import { DashboardComponent } from './Components/Main/dashboard/dashboard.component'
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module'
-import { ListComponent } from './Components/list/list.component'
+import { DetailComponent } from './Components/Detail/detail.component'
 import { HomeComponent } from './Components/Main/home.component'
+import { SolServicesComponent } from './Components/Main/solServices/sol-services/sol-services.component'
 
 import { NgxPaginationModule } from 'ngx-pagination'
-import { FormsModule } from '@angular/forms';
-import { SolServicesComponent } from './Components/Main/solServices/sol-services/sol-services.component'
+import { FormsModule } from '@angular/forms'
+import { IgxFinancialChartModule } from 'igniteui-angular-charts'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { SolServicesComponent } from './Components/Main/solServices/sol-services
     AsideComponent,
     HomepageComponent,
     DashboardComponent,
-    ListComponent,
+    DetailComponent,
     HomeComponent,
     SolServicesComponent
   ],
@@ -34,7 +35,8 @@ import { SolServicesComponent } from './Components/Main/solServices/sol-services
     HttpClientModule,
     AppRoutingModule,
     NgxPaginationModule,
-    FormsModule
+    FormsModule,
+    IgxFinancialChartModule
   ],
   providers: [],
   bootstrap: [AppComponent],

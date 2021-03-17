@@ -1,7 +1,7 @@
 #homepage__box{
   display:flex;
   align-items:center;
-  height:100vh;
+  height:calc(100vh-89px);
   width:100vw;
   background-image:url('../../../../assets//Img//blockchain.jpg');
   background-size: cover;

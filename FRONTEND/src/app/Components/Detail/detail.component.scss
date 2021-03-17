@@ -1,0 +1,61 @@
+#network__detail{
+  display:flex;
+  align-items:center;
+  padding:80px 60px 20px 40px;;
+  height:89vh;
+  color:black;
+  background-color:#1a2235;
+
+  .network__calculator{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  width:50vw;
+  margin:30px;
+  padding:20px;
+  border:2px outset #950aff;
+  background-color:rgba(255, 255, 255, 0.863);
+  border-radius:30px;
+  box-shadow: 10px 10px 30px  #950aff;
+
+    .small-text{
+      font-size:10px;
+      color:gray;
+      margin-bottom:10px;
+    }
+    &-title{
+      display:flex;
+      justify-content: space-between;
+      width:100%;
+      margin-bottom:20px;
+    }
+    &-reward{
+      display:flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width:60%;
+    }
+    &-reward>div>h5{
+     margin-bottom: 10px;
+    }
+    &-valueBox{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items:center;
+      justify-content: space-between;
+      width:100%;
+      padding:0 25px;
+    }
+    .network__calculator-value{
+      width:40%;
+      padding-bottom: 20px;
+    }
+    .network__income{
+      width:100%;
+      margin-bottom:15px;
+    }
+  }
+}
+
+

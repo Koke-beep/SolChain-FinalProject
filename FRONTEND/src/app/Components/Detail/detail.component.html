@@ -1,0 +1,73 @@
+<section id="network__detail">
+  <igx-financial-chart
+      [dataSource]="data"
+      width="45vw"
+      height="80vh"
+      chartType="candle"
+      volumeType="Column"
+      crosshairsDisplayMode="Horizontal"
+      crosshairsSnapToData="true"
+      crosshairsAnnotationEnabled="true"
+      style="background-color:rgba(255, 255, 255, 0.863);
+      border-radius:30px;
+      border: 2px solid #950aff;
+      box-shadow: 10px 5px 20px #950aff">
+  </igx-financial-chart>
+  <div class="network__calculator">
+    <div class="network__calculator-title">
+      <h1>{{coinData.name}}</h1>
+      <h1>{{coinData.symbol}}</h1>
+    </div>
+    <div class="network__calculator-reward">
+      <div>
+        <h6 class="small-text">Expected reward rate</h6>
+        <h4>1-15%</h4>
+      </div>
+      <div>
+        <h6 class="small-text">Comission</h6>
+        <h5>3%</h5>
+      </div>
+    </div>
+    <div>
+      <h6 class="small-text">Delegated SOL Amount</h6>
+      <span>{{totalCoins}} Sol</span>
+      <input
+      class="network__income"
+      type="range"
+      min="1"
+      max="1000"
+      value="1"
+      (input)="recalculateFields($event.target.value)"
+      >
+    </div>
+    <div class="network__calculator-valueBox">
+      <div class="network__calculator-value">
+        <h6 class="small-text">Holdings Value</h6>
+        <h4>{{holdingValue}} $</h4>
+      </div>
+      <div class="network__calculator-value">
+        <h6 class="small-text">{{coinData.symbol}} Price</h6>
+        <h4>{{price}} $</h4>
+      </div>
+      <div class="network__calculator-value">
+        <h6 class="small-text">Annual Reward Rate</h6>
+        <h4>12%</h4>
+      </div>
+      <div class="network__calculator-value">
+        <h6 class="small-text">Estimated Net Daily Rewards</h6>
+        <h4>{{dayliSol}} {{coinData.symbol}}</h4>
+        <h5>{{dayliReward}} $</h5>
+      </div>
+      <div class="network__calculator-value">
+        <h6 class="small-text">Estimated Net Monthly Rewards</h6>
+        <h4>{{monthlySol}} {{coinData.symbol}}</h4>
+        <h5>{{monthlyReward}}$</h5>
+      </div>
+      <div class="network__calculator-value">
+        <h6 class="small-text">Estimated Net Annual Rewards</h6>
+        <h4>{{annualSol}} {{coinData.symbol}}</h4>
+        <h5>{{annualReward}} $</h5>
+      </div>
+    </div>
+  </div>
+</section>
