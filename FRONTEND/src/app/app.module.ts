@@ -14,8 +14,10 @@ import { HomeComponent } from './Components/Main/home.component'
 import { SolServicesComponent } from './Components/Main/solServices/sol-services/sol-services.component'
 
 import { NgxPaginationModule } from 'ngx-pagination'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { IgxFinancialChartModule } from 'igniteui-angular-charts'
+import { ClipboardModule } from 'ngx-clipboard'
+import { LoginComponent } from './Components/Shared/login/login.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { IgxFinancialChartModule } from 'igniteui-angular-charts'
     DashboardComponent,
     DetailComponent,
     HomeComponent,
-    SolServicesComponent
+    SolServicesComponent,
+    LoginComponent
   ],
 
   imports: [
@@ -35,8 +38,10 @@ import { IgxFinancialChartModule } from 'igniteui-angular-charts'
     HttpClientModule,
     AppRoutingModule,
     NgxPaginationModule,
+    ClipboardModule,
     FormsModule,
-    IgxFinancialChartModule
+    IgxFinancialChartModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

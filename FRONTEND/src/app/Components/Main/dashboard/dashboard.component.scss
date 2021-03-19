@@ -78,13 +78,20 @@
       display:flex;
       flex-direction:row;
       align-items: center;
-      margin-bottom: 2em;
+      margin-bottom: 1.5em;
+
+      &:hover > .company__info-logo{
+        border:5px outset #950aaf;
+      }
+      &:hover >  .company__data{
+        border:5px outset #950aaf;
+      }
       .company__info-logo{
         display:flex;
         justify-content: center;
         align-items: center;
-        width:65px;
-        height:65px;
+        width:50px;
+        height:50px;
         border-radius:50%;
         border:4px outset #00d9a1;
         position:absolute;
@@ -99,19 +106,21 @@
         display:flex;
         margin-left:50px;
         padding:0 20px 0 80px;
-        height:40px;
+        height:30px;
         border:5px outset #00d9a1;
         border-radius:0 80px 80px 0;
         width: 25em;
+
         & .company__logo{
           display:none;
         }
         & span:nth-child(2){
-         font-size:18px;
+         font-size:14px;
         }
         & span:nth-child(3){
           font-weight: bold;
         }
+
         .company__data-link{
           display:flex;
           justify-content: space-between;
@@ -119,19 +128,25 @@
           width:100%;
           cursor: pointer;
           h4{
-            font-size: 1.3em;
+            font-size: 1.05em;
             width:160px;
           }
         }
       }
       .company__logo{
+        align-items:center;
+        display:flex;
         border:none;
+        justify-content:center;
         background-color:transparent;
         outline:none;
+        height:40px;
+        width:40px;
         cursor:pointer;
+
         img{
-          height:40px;
-          width:40px;
+          height:100%;
+          width:100%;
         }
       }
     }

@@ -17,13 +17,12 @@
           <button type="button" (click)="addCoinToList(coin, 'user')">+</button>
         </div>
       </div>
-      <div  *ngIf="user.logged; then userBlock else dashBlock "></div>
-
     </div>
+    <div  *ngIf="user | async then userBlock else dashBlock"></div>
 
       <ng-template #userBlock>
         <div class="company__section">
-          <div class="company__info" *ngFor="let coin of user.list ">
+          <div class="company__info" *ngFor="let coin of user._value.list ">
             <div class="company__info-logo">
               <img src={{coin.logo}}/>
             </div>
@@ -40,7 +39,7 @@
               </button>
             </div>
             <div>
-              <button class="company__logo" type="button" >
+              <button class="company__logo" type="button" (click)="deleteCoin(coin._id,id)">
                 <img src="https://img.icons8.com/nolan/96/cancel.png"/>
               </button>
             </div>

@@ -69,6 +69,8 @@ export class DetailComponent implements OnInit {
     { time: new Date(2013, 1, 15), open: 267.63, high: 268.92, low: 263.11, close: 265.09, volume: 3981233 }
   ]
 
+  address:string = '3RhKQSNv7xKTQeNdLKPjCiD2QcUfxEi12rtgUkJf2Ln0'
+
   coinId: string;
   coinData:CoinDataLink;
 
