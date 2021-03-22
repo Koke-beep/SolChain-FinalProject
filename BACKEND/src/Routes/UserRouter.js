@@ -8,7 +8,8 @@ function UserRouter () {
     .route('/')
     .get(UserController.getUsers)
 
-  router.route('/:userId')
+  router
+    .route('/:userId')
     .put(UserController.putUserCoinList)
 
   return router

@@ -1,6 +1,7 @@
 const Coin = require('../Models/CointModel')
 const axios = require('axios')
 require('dotenv').config()
+
 const URLCOINID = process.env.URLCOINID
 const APIKEY = process.env.APIKEY
 
@@ -18,7 +19,7 @@ function CoinController () {
 
   const getCoinById = async (req, res) => {
     const { coinId } = req.params
-    const { data } = await axios.get(URLCOINID + `?id=${coinId}&` + APIKEY)
+    const { data } = await axios.get(`${URLCOINID}?id=${coinId}&${APIKEY}`)
 
     const { name, symbol, quote: { USD: { price } } } = data.data[`${coinId}`]
     const dataCoin = { name, symbol, price }

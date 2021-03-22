@@ -1,7 +1,8 @@
 <section id="network__detail">
   <igx-financial-chart
+      data-aos="slide-down"
       [dataSource]="data"
-      width="45vw"
+      width="621px"
       height="80vh"
       chartType="candle"
       volumeType="Column"
@@ -13,7 +14,7 @@
       border: 2px solid #950aff;
       box-shadow: 10px 5px 20px #950aff">
   </igx-financial-chart>
-  <div *ngIf="coinData" class="network__calculator">
+  <div *ngIf="coinData" class="network__calculator" data-aos="fade-left" >
     <div class="network__calculator-title">
       <h1>{{coinData.name}}</h1>
       <h1>{{coinData.symbol}}</h1>

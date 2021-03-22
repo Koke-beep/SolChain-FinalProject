@@ -12,12 +12,17 @@ import { AppRoutingModule } from './app-routing.module'
 import { DetailComponent } from './Components/Detail/detail.component'
 import { HomeComponent } from './Components/Main/home.component'
 import { SolServicesComponent } from './Components/Main/solServices/sol-services/sol-services.component'
+import { ToastrModule } from 'ngx-toastr'
 
 import { NgxPaginationModule } from 'ngx-pagination'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { IgxFinancialChartModule } from 'igniteui-angular-charts'
 import { ClipboardModule } from 'ngx-clipboard'
 import { LoginComponent } from './Components/Shared/login/login.component'
+import { AboutUsComponent } from './Components/Main/aboutUs/about-us/about-us.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './Components/Main/contact-us/contact-us.component';
+import { FooterComponent } from './Components/Shared/footer/footer.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +34,10 @@ import { LoginComponent } from './Components/Shared/login/login.component'
     DetailComponent,
     HomeComponent,
     SolServicesComponent,
-    LoginComponent
+    LoginComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    FooterComponent
   ],
 
   imports: [
@@ -41,7 +49,9 @@ import { LoginComponent } from './Components/Shared/login/login.component'
     ClipboardModule,
     FormsModule,
     IgxFinancialChartModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -27,6 +27,10 @@
     input{
       width: 150px;
       transition: width 0.5s;
+      border-radius:30px;
+      text-align:center;
+      outline:none;
+      z-index:5;
     }
     input:focus{
       width: 360px;
@@ -40,13 +44,15 @@
       border-bottom-right-radius:15px;
       position:absolute;
       background-color:white;
-      margin-top:20px;
+      margin-top:10px;
+      z-index:4;
 
       div{
         display:flex;
         justify-content: space-between;
-        width:340px;
+        width:330px;
         padding: 3px 10px;
+        margin-top:8px;
       }
       div:hover{
         background-color: #00d9a1;
@@ -121,6 +127,7 @@
           font-weight: bold;
         }
 
+
         .company__data-link{
           display:flex;
           justify-content: space-between;
@@ -152,6 +159,9 @@
     }
   }
 }
+.dashboard__background{
+  z-index:-1
+}
 
 @media screen and (max-width:1120px){
   .company__section{
@@ -160,7 +170,6 @@
   .dashboard__background{
     position:absolute;
     height:100vh;
-
     opacity:20%;
     z-index: -1;
   }

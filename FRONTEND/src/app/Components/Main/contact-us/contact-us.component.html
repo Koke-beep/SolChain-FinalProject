@@ -1,0 +1,43 @@
+<section id="contactUs">
+  <div class="contactUs__box">
+    <h1>Contact us</h1>
+    <div class="contactUs__box-lab">
+      <p>Send your message in the form and we will get back to you as early as possible</p>
+      <form class="contactUs__form" [formGroup]="messageForm">
+        <input
+        class="contactUs__form-data"
+        type="text"
+        placeholder="Full name"
+        minlength="6"
+        formControlName="name">
+
+        <input
+        class="contactUs__form-data"
+        type="email"
+        placeholder="Email"
+        minlength="13"
+        formControlName="email">
+
+        <input
+        class="contactUs__form-data"
+        type="text"
+        placeholder="Title"
+        maxlength="20"
+        formControlName="subject">
+
+        <textarea
+        class="contactUs__form-data"
+        placeholder="Message"
+        maxlength="300"
+        formControlName="text">
+        </textarea>
+        <button type="button"
+        [disabled]="!messageForm.valid"
+        class="contactUs__form-send"
+        (click)="submitMessage(this.messageForm.value)">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

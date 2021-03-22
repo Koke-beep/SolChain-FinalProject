@@ -9,7 +9,7 @@ import { DashboardService } from '../../../core/Services/dashboard.service'
 })
 
 export class AsideComponent {
-  login = this.userLogin.login
+  user = this.userLogin.user
 
   constructor (private userLogin: DashboardService) {}
 

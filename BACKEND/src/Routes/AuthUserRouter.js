@@ -5,7 +5,8 @@ const controller = require('../Controllers/AuthController')
 function AuthUserRouter () {
   const router = new Router()
 
-  router.post('/register', controller.register)
+  router
+    .post('/register', controller.register)
 
   router
     .route('/login')
