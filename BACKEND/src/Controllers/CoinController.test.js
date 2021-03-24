@@ -1,8 +1,10 @@
+/* eslint-disable node/no-callback-literal */
 const Coin = require('../Models/CointModel')
-// const axios = require('axios')
+const axios = require('axios')
 
 const {
-  getAllCoins
+  getAllCoins,
+  getCoinById
 } = require('./CoinController')
 
 jest.mock('../Models/CointModel.js')
@@ -19,7 +21,7 @@ describe('Given CoinController', () => {
         amount: 1000,
         name: 'hi'
       },
-      params: { coinId: {} }
+      params: { coinId: 1 }
     }
 
     res = {
@@ -29,7 +31,7 @@ describe('Given CoinController', () => {
     }
   })
 
-  describe('When getAllCoins is called', () => {
+  describe('When getAllCoins it is called succesfull', () => {
     test('Then res.json will be called', () => {
       Coin.find.mockImplementationOnce((query, cb) => cb(false))
       getAllCoins(req, res)
@@ -38,7 +40,7 @@ describe('Given CoinController', () => {
     })
   })
 
-  describe('When getAllCoins is called', () => {
+  describe('When getAllCoins it is called and an error ocurrs', () => {
     test('Then res.send will be called', () => {
       Coin.find.mockImplementationOnce((query, cb) => cb(true))
       getAllCoins(req, res)
@@ -47,12 +49,27 @@ describe('Given CoinController', () => {
     })
   })
 
-  // describe('When getOneById is called', () => {
-  //   test('Then res.json will be called', async () => {
-  //     const data = axios.get.mockResolvedValue('done')
-  //     await getOneById(req, res)
+  describe('When getCoinById is called', () => {
+    test('Then res.json will be called', async () => {
+      const data = {
+        data: {
+          1: {
+            name: 'random',
+            symbol: 'random',
+            quote: {
+              USD: {
+                price: 15
+              }
+            }
+          }
+        }
+      }
 
-  //     expect(res.json).toHaveBeenCalled()
-  //   })
-  // })
+      axios.get.mockResolvedValueOnce({ data })
+
+      await getCoinById(req, res)
+
+      expect(res.json).toHaveBeenCalled()
+    })
+  })
 })

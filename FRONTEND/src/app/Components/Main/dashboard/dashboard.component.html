@@ -24,7 +24,7 @@
         <div class="company__section" >
           <div data-aos="fade-right" class="company__info" *ngFor="let coin of user._value.list ">
             <div class="company__info-logo">
-              <img src={{coin.logo}}/>
+              <img src={{coin.logo}} alt="{{coin.name}}"/>
             </div>
             <div class="company__data">
               <a class="company__data-link" routerLink="/detail/{{coin.id}}">
@@ -35,12 +35,12 @@
                 </span>
               </a>
               <button  class="company__logo" type="button" >
-                <img src="https://img.icons8.com/nolan/96/cancel.png"/>
+                <img src="https://img.icons8.com/nolan/96/cancel.png" alt="{{coin.name}}"/>
               </button>
             </div>
             <div>
               <button class="company__logo" type="button" (click)="deleteCoin(this.user._value._id,coin.id)">
-                <img src="https://img.icons8.com/nolan/96/cancel.png"/>
+                <img src="https://img.icons8.com/nolan/96/cancel.png" alt="{{coin.name}}"/>
               </button>
             </div>
           </div>
@@ -52,7 +52,7 @@
           <div class="company__info"
             *ngFor="let coin of listCoins | paginate:config">
             <div class="company__info-logo">
-              <img src={{coin.logo}}/>
+              <img src={{coin.logo}} alt="{{coin.name}}"/>
             </div>
             <div class="company__data">
               <a class="company__data-link" routerLink="/detail/{{coin.id}}">
@@ -69,5 +69,5 @@
       </ng-template>
 
     </div>
-  <img alt="networks" class="dashboard__background" src="../../../../assets//Img//Networks.jpg">
+  <img alt="networks" class="dashboard__background" src="../../../../assets//Img//Networks.jpg" alt="background tree">
 </section>

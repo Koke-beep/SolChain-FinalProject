@@ -13,7 +13,7 @@ import { User } from '../models/user'
 export class DashboardService {
   url = 'http://localhost:5000';
   login = new BehaviorSubject(false);
-  user = new BehaviorSubject(null)
+  user: any = new BehaviorSubject(null)
 
   constructor (private http:HttpClient) { }
 
@@ -42,11 +42,10 @@ export class DashboardService {
   }
 
   logout () {
-    return this.http.get<any>(`${this.url}/logout`).subscribe()
+    return this.http.get<User>(`${this.url}/logout`).subscribe()
   }
 
   sendMessage (payload) {
-    return this.http.post<any>(`${this.url}/messageForm`, payload).subscribe(data => {
-    })
+    return this.http.post<any>(`${this.url}/messageForm`, payload).subscribe()
   }
 }

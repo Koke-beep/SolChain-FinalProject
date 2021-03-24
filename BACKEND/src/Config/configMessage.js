@@ -4,7 +4,6 @@ require('dotenv').config()
 const configMessage = (formulario) => {
   const EMAIL = process.env.EMAIL
   const PASSWORD = process.env.PASSWORD
-
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

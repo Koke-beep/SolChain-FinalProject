@@ -19,15 +19,15 @@ export class LoginComponent {
 
   constructor (
     private checkLogin: DashboardService,
-    private toastr: ToastrService) {}
+    private toastr: ToastrService) {
+  }
 
   submitForm (dataForm) {
     return this.checkLogin.postUser(dataForm).subscribe(data => {
       this.checkLogin.user.next(data)
       this.closeLogin()
       this.toastr.success('Welcome', 'Login successfull')
-    }, error => {
-      console.log(`Error:${error}`)
+    }, () => {
       this.toastr.error('Password/mail inaccurate ', 'Login fail')
     })
   }

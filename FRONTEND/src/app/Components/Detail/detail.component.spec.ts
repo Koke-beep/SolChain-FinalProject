@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-
 import { DetailComponent } from './detail.component'
+import { HttpClientTestingModule } from '@angular/common/http/testing'
+import {DashboardService} from '../../core/Services/dashboard.service',
 
 describe('DetailComponent', () => {
   let component: DetailComponent
@@ -8,7 +9,9 @@ describe('DetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DetailComponent]
+      imports: [HttpClientTestingModule],
+      declarations: [DetailComponent],
+      providers: [DashboardService],
     })
       .compileComponents()
   })

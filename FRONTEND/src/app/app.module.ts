@@ -20,9 +20,10 @@ import { IgxFinancialChartModule } from 'igniteui-angular-charts'
 import { ClipboardModule } from 'ngx-clipboard'
 import { LoginComponent } from './Components/Shared/login/login.component'
 import { AboutUsComponent } from './Components/Main/aboutUs/about-us/about-us.component'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ContactUsComponent } from './Components/Main/contact-us/contact-us.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ContactUsComponent } from './Components/Main/contact-us/contact-us.component'
 import { FooterComponent } from './Components/Shared/footer/footer.component'
+import { ShadowComponent } from './Components/Shared/shadow/shadow.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FooterComponent } from './Components/Shared/footer/footer.component'
     LoginComponent,
     AboutUsComponent,
     ContactUsComponent,
-    FooterComponent
+    FooterComponent,
+    ShadowComponent
   ],
 
   imports: [

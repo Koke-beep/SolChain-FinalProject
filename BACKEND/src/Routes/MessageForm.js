@@ -8,6 +8,7 @@ function MessageForm () {
     .route('/')
     .post((req, res) => {
       configMessage(req.body)
+      res.end()
     })
 
   return router

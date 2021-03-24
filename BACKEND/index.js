@@ -16,7 +16,11 @@ const app = express()
 
 connect(URLDDBB, { useNewUrlParser: true, useUnifiedTopology: true })
 
-app.use(cors())
+const corsOptions = {
+  origin: 'http://localhost:4200'
+}
+
+app.use(cors(corsOptions))
 app.use(morgan('dev'))
 
 app.use(express.urlencoded({ extender: true }))

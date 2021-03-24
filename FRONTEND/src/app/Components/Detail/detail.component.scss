@@ -1,7 +1,7 @@
 #network__detail{
   display:flex;
   align-items:center;
-  padding:80px 60px 20px 40px;;
+  padding:80px 60px 20px 40px;
   height:89vh;
   color:black;
   background-color:#1a2235;
@@ -41,11 +41,11 @@
     &-valueBox{
       display:flex;
       flex-wrap: wrap;
-      justify-content: center;
       align-items:center;
       justify-content: space-between;
       width:100%;
       padding:0 25px;
+      font-family:'Orbitron', sans-serif;
     }
     .network__calculator-value{
       width:40%;
@@ -72,7 +72,6 @@
       }
       & button:nth-child(1n){
         font-size:11px;
-        font-family:"arial";
         letter-spacing:1px;
       }
 
@@ -90,7 +89,7 @@
         font-size:11px;
         border:none;
         font-weight:700;
-        font-family:"arial";
+        font-family:'Orbitron', sans-serif;
         letter-spacing:1px;
         cursor:pointer;
 

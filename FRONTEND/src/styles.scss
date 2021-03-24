@@ -2,15 +2,8 @@
   margin:0;
   padding:0;
 }
-html{
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
-}
 
 body{
-  // max-width: 420px;
-  // min-width: 300px;
   font-family:'Orbitron', sans-serif;
   color:white;
   letter-spacing: 2px;

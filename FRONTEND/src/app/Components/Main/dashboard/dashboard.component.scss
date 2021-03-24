@@ -1,3 +1,9 @@
+@mixin positioning{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
 #dashboard__box{
   display:flex;
   color:black;
@@ -73,10 +79,8 @@
   }
 
   .company__section{
-    display:flex;
+    @include positioning;
     flex-direction: column;
-    justify-content:center;
-    align-items: center;
     margin-top:30px;
     width:60vw;
 
@@ -93,9 +97,7 @@
         border:5px outset #950aaf;
       }
       .company__info-logo{
-        display:flex;
-        justify-content: center;
-        align-items: center;
+        @include positioning;
         width:50px;
         height:50px;
         border-radius:50%;
@@ -141,10 +143,8 @@
         }
       }
       .company__logo{
-        align-items:center;
-        display:flex;
+        @include positioning;
         border:none;
-        justify-content:center;
         background-color:transparent;
         outline:none;
         height:40px;
@@ -160,7 +160,7 @@
   }
 }
 .dashboard__background{
-  z-index:-1
+  z-index:-1;
 }
 
 @media screen and (max-width:1120px){
@@ -178,10 +178,8 @@
 @media screen and (max-width:830px){
 
   .company__data{
-    padding-left:30px !important;
-  }
-  .company__data{
     width:300px !important;
+    padding-left:30px !important;
 
     & .company__logo{
       display:flex !important;

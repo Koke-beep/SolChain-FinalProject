@@ -2,7 +2,7 @@
 import { Component, HostListener, OnInit } from '@angular/core'
 import { Coin } from 'src/app/core/models/coin'
 import { DashboardService } from '../../../core/Services/dashboard.service'
-
+import { ConfigPage } from '../../../core/models/config'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   fadeFilter: string = null;
   filterList:string = 'filter__list'
 
-  config:any
+  config:ConfigPage
 
   login = this.topCoinDashboard.login
   user:any = this.topCoinDashboard.user;
@@ -31,7 +31,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit (): void {
     this.getTopCoins()
-    console.log('user', this.user)
   }
 
   @HostListener('click')

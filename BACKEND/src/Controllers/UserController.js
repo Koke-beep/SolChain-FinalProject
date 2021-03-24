@@ -14,7 +14,7 @@ function UserController () {
     const { userId } = req.params
     const newCoinToAdd = await axios.get(`${URLCOINID}?id=${idCoin}&${APIKEY}`)
 
-    await User.findById(userId, (error, userUpdated) => {
+    User.findById(userId, (error, userUpdated) => {
       if (error) {
         res.status(500)
         res.send('Something wrong with user update')

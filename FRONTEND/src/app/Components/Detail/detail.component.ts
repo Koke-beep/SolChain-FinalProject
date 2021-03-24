@@ -89,7 +89,6 @@ export class DetailComponent implements OnInit {
 
   ngOnInit (): void {
     this.coinId = this.route.snapshot.paramMap.get('coinId')
-    console.log('graphic', this.data)
     this.getCoinById(this.coinId)
   }
 
@@ -122,14 +121,10 @@ export class DetailComponent implements OnInit {
     this.dayliReward = +this.dayliRewardMoney(amountCoins)
     this.dayliSol = this.dailySolReward(this.dayliReward)
 
-    this.monthlySol = (this.dayliSol * 30)
-    this.monthlySol = +this.monthlySol.toFixed(2)
-    this.monthlyReward = this.dayliReward * 30
-    this.monthlyReward = +this.monthlyReward.toFixed(2)
+    this.monthlySol = +(this.dayliSol * 30).toFixed(2)
+    this.monthlyReward = +(this.dayliReward * 30).toFixed(2)
 
-    this.annualSol = (this.monthlySol * 12)
-    this.annualSol = +this.annualSol.toFixed(2)
-    this.annualReward = this.monthlyReward * 12
-    this.annualReward = +this.annualReward.toFixed(2)
+    this.annualSol = +(this.monthlySol * 12).toFixed(2)
+    this.annualReward = +(this.monthlyReward * 12).toFixed(2)
   }
 }
