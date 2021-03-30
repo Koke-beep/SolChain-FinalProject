@@ -4,11 +4,11 @@
     <form class="login__form" [formGroup]="signinForm">
       <label>
         e-mail:
-        <input class="login__data" type="email" formControlName="email" autocomplete="on">
+        <input class="login__data" type="email" formControlName="email" minlength="13">
       </label>
       <label>
         password:
-        <input class="login__data" type="password" formControlName="password">
+        <input class="login__data" type="password" formControlName="password" minlength="4">
       </label>
       <button
       class="login__signin"

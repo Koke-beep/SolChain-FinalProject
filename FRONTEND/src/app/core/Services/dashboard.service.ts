@@ -13,16 +13,12 @@ import { User } from '../models/user'
 export class DashboardService {
   url = 'http://localhost:5000';
   login = new BehaviorSubject(false);
-  user = new BehaviorSubject(null)
+  user: any = new BehaviorSubject(null)
 
   constructor (private http:HttpClient) { }
 
   getBestCoins (): Observable<Coin[]> {
     return this.http.get<Coin[]>(this.url)
-  }
-
-  deleteCoinById (coinId): Observable<Coin[]> {
-    return this.http.delete<Coin[]>(`${this.url}/coin/${coinId}`)
   }
 
   getCoinById (coinId): Observable<CoinDataLink> {
@@ -33,11 +29,23 @@ export class DashboardService {
     return this.http.post<User>(`${this.url}/auth/login`, data)
   }
 
-  popupLogin () {
+  popupLogin () :void {
     this.login.next(!this.login.getValue())
   }
 
-  deleteCoinFromList (coinId, userId) {
-    return this.http.put<User>(`${this.url}/user/${userId}`, coinId)
+  deleteCoinFromList (userId:string, coinId:number) {
+    return this.http.put<User>(`${this.url}/user/${userId}`, { idCoin: coinId }).subscribe(data => {
+      this.user.next(data)
+    }, error => {
+      console.log(`Update list coins user error: ${error}`)
+    })
+  }
+
+  logout () {
+    return this.http.get<User>(`${this.url}/logout`).subscribe()
+  }
+
+  sendMessage (payload) {
+    return this.http.post<any>(`${this.url}/messageForm`, payload).subscribe()
   }
 }

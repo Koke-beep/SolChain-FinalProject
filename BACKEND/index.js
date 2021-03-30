@@ -3,10 +3,10 @@ const morgan = require('morgan')
 const debug = require('debug')('app')
 const cors = require('cors')
 require('dotenv').config()
-// const session = require('express-session')
 const CoinRouter = require('./src/Routes/CoinRouter')
 const userRouter = require('./src/Routes/UserRouter')
 const authRouter = require('./src/Routes/AuthUserRouter')
+const messageForm = require('./src/Routes/MessageForm')
 
 const { connect } = require('mongoose')
 const PORT = process.env.PORT || 5000
@@ -16,7 +16,11 @@ const app = express()
 
 connect(URLDDBB, { useNewUrlParser: true, useUnifiedTopology: true })
 
-app.use(cors())
+const corsOptions = {
+  origin: 'http://localhost:4200'
+}
+
+app.use(cors(corsOptions))
 app.use(morgan('dev'))
 
 app.use(express.urlencoded({ extender: true }))
@@ -26,7 +30,7 @@ require('./src/Passport')(app)
 
 app.use('/user', userRouter)
 app.use('/auth', authRouter)
-
+app.use('/messageForm', messageForm)
 app.use('/', CoinRouter)
 
 app.listen(PORT, () => {

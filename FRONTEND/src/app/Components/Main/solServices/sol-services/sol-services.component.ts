@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import AOS from 'aos'
 
 @Component({
   selector: 'app-sol-services',
@@ -6,10 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sol-services.component.scss']
 })
 export class SolServicesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit (): void {
+    AOS.init()
   }
-
 }

@@ -2,7 +2,7 @@
 import { Component, HostListener, OnInit } from '@angular/core'
 import { Coin } from 'src/app/core/models/coin'
 import { DashboardService } from '../../../core/Services/dashboard.service'
-
+import { ConfigPage } from '../../../core/models/config'
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -16,7 +16,8 @@ export class DashboardComponent implements OnInit {
   fadeFilter: string = null;
   filterList:string = 'filter__list'
 
-  config:any
+  config:ConfigPage
+
   login = this.topCoinDashboard.login
   user:any = this.topCoinDashboard.user;
 
@@ -28,17 +29,17 @@ export class DashboardComponent implements OnInit {
     }
   }
 
+  ngOnInit (): void {
+    this.getTopCoins()
+  }
+
   @HostListener('click')
   clicked () {
     this.filterCoinByName(null)
     this.filterTerm = null
   }
 
-  ngOnInit (): void {
-    this.getTopCoins()
-  }
-
-  getTopCoins () {
+  getTopCoins () :void {
     this.topCoinDashboard.getBestCoins().subscribe(data => {
       this.listCoins = data
     }, error => {
@@ -46,32 +47,28 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  filterCoinByName (name) {
+  filterCoinByName (name) :void {
     this.coinFound = !name ? [] : this.coinFound = this.listCoins.filter(coin => coin.name.toUpperCase().includes(name.toUpperCase()))
     this.coinFound = this.coinFound.sort((a, b) => a.name.toUpperCase().localeCompare(b.name.toUpperCase()))
   }
 
-  addCoinToList (coin, owner) {
-    let newCoin
-    if (owner === 'user') {
-      newCoin = this.user.list.find((element) => element.name.toUpperCase() === coin.name.toUpperCase())
-      this.user.list = !newCoin ? [...this.user.list, coin] : this.user.list
-      this.filterListClass(false)
-    } else {
-      newCoin = this.listCoins.find((element) => element.name.toUpperCase() === coin.name.toUpperCase())
-      this.filterListClass(false)
-    }
+  addCoinToList (coin) :void {
+    let newCoin = null
+
+    newCoin = this.user._value.list.find((element) => element.name.toUpperCase() === coin.name.toUpperCase())
+    this.user._value.list = !newCoin ? [...this.user._value.list, coin] : this.user._value.list
+    this.filterListClass(false)
   }
 
-  filterListClass (bool) {
+  filterListClass (bool) :void {
     this.fadeFilter = bool ? null : 'filter__list-fade'
   }
 
-  loadPage (event) {
+  loadPage (event) :void {
     this.config.currentPage = event
   }
 
-  deleteCoin (coinId, userId) {
-    this.topCoinDashboard.deleteCoinFromList(coinId, userId)
+  deleteCoin (userId, coinId):void {
+    this.topCoinDashboard.deleteCoinFromList(userId, coinId)
   }
 }

@@ -12,16 +12,18 @@
     width:50px;
     height:50px;
   }
+
   .cube-decorator{
     width:400px;
     height:400px;
-    margin-left: 260px;
+    margin-left: 300px;
   }
+
   .services__category{
     display:flex;
     flex-direction:column;
     align-items: center;
-    margin-left: 25px;
+    margin-left: 80px;
     text-align:justify;
     margin-top:30px;
 
@@ -44,8 +46,6 @@
       h4, p{
         margin-top:8px;
       }
-
     }
   }
-
 }

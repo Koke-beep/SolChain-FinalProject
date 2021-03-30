@@ -1,0 +1,31 @@
+div{
+  position:relative;
+  height:50vh;
+  background-color:red;
+  width:50px;
+  #start{
+    float:right;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    box-shadow: 300px 300px yellow,600px 300px yellow,400px 300px yellow,200px 100px yellow,  ;
+    animation:animStar 50s linear infinite;
+  }
+
+  #start2 {
+    width: 5px;
+    height: 5px;
+    box-shadow: 343px 379px green , 245px 260px green , 412px 372px green , 507px 211px green ;
+    animation: animStar 100s linear infinite;
+  }
+}
+
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}

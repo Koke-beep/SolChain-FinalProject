@@ -8,15 +8,16 @@
   width:100vw;
   height:100vh;
   z-index:21;
-  background-image:url('../../../../assets/Img/prueba4.jpg');
+  // background: white;
+  background-image:url('../../../../assets/Img/prueba5.jpg');
   background-size:100%;
-  color:black;
+  color:white;
 
   .login__header{
     background-size:cover;
     width:30%;
     height:200px;
-    border-top-left-radius: 30px; ;
+    border-top-left-radius: 30px;
     border-top-right-radius:30px;
   }
   .login__form-box{
@@ -40,21 +41,36 @@
         display:flex;
         flex-direction:column;
         width:250px;
+        padding-bottom:15px;
       }
       .login__data{
         width:100%;
+        padding-left:15px;
         margin-bottom: 20px;
         border-radius: 15px;
+        outline:none;
+        background:transparent;
+        color:white;
+
+        &:focus{
+          border: 2px solid white;
+        }
       }
 
       .login__signin{
-        margin-top:50px;
+        margin-top:30px;
         margin-left:10%;
         width:60%;
         border-radius:30px;
         outline:none;
         font-weight:bolder;
         height: 30px;
+        cursor:pointer;
+
+        &:hover{
+          background-color:#00d9a1;
+          color:white;
+        }
       }
     }
     .login__cancel{
@@ -73,7 +89,12 @@
         outline:none;
         cursor:pointer;
         margin-top: 25px;
+        font-weight:bolder;
 
+        &:hover{
+          background:#950AAF;
+          color:white;
+        }
       }
     }
 
