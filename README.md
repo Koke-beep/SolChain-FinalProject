@@ -7,7 +7,9 @@ SolChain es una web con el objetivo de generar confianza en el usuario para que 
 
 Tener instalado un editor de cógido. Puedes instalar node.js en https://nodejs.org/es/.<br> 
 Instala npm e inicialo:<br>
+
 `npm install -g`<br>
+
 `npm init --yes`
 
 ### Inicialización 🚀
