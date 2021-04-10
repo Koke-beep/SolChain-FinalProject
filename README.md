@@ -32,6 +32,8 @@ Abre los archvios "backend" y "frontend" y ejecutalos en la terminal<br>
 
 ### En construcción
 
+La aplicación sigue en desarrollo.
+
 ### Agradecimientos
 
 <ul><li>Skylab Coder Academy</li><li>Iván Dobry</li><li>Compañeros desarrolladores Skylab</li>
