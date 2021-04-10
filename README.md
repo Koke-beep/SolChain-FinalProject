@@ -2,5 +2,5 @@
 
 ## Construido con:
 
-<ol><li>hi</li></ol>
+<ul><li>Angular.js</li></ul>
 
