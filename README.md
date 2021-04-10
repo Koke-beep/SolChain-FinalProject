@@ -10,6 +10,12 @@ Instala npm e inicialo:<br>
 `npm install -g`<br>
 `npm init --yes`
 
+### Arranque
+
+Abre el editor de cógido y clona el proyecto <br>
+
+`git clone https://github.com/Koke-beep/SolChain-FinalProject.git`
+
 ### Construido con:
 
 <ul><li>Angular.js</li></ul>
